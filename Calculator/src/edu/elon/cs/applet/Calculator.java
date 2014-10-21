@@ -85,10 +85,11 @@ public class Calculator extends JApplet implements ActionListener
 
 		keysArray[15] = new JButton(".");
 
+		keysArray[16] = new JButton("CLR");
 
-		keyPad.setLayout(new GridLayout(5, 4));
+		keyPad.setLayout(new GridLayout(4, 4));
 
-		for (int i = 0; i <= 15; i++)
+		for (int i = 0; i <= 16; i++)
 
 		{
 
@@ -104,7 +105,7 @@ public class Calculator extends JApplet implements ActionListener
 
 		add(keyPad, BorderLayout.SOUTH);
 
-		add(keysArray[15], BorderLayout.EAST);
+		add(keysArray[16], BorderLayout.EAST);
 
 	}
 
@@ -149,17 +150,17 @@ public class Calculator extends JApplet implements ActionListener
 
 				case 15:
 
-//					if (clearText)
-//
-//					{
-//
-//						ledField.setText("");
-//
-//						clearText = false;
-//
-//					}
-//					ledField.setText(ledField.getText()
-//							+ keysArray[i].getLabel());
+					if (clearText)
+
+					{
+
+						ledField.setText("");
+
+						clearText = false;
+
+					}
+					ledField.setText(ledField.getText()
+							+ keysArray[i].getLabel());
 
 					break;
 
@@ -247,7 +248,7 @@ public class Calculator extends JApplet implements ActionListener
 
 				case 16:
 
-//					clearText = true;
+					clearText = true;
 
 					first = true;
 
